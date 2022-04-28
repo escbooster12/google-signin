@@ -11,6 +11,7 @@ const Home = (props) => {
 
     const handleSignedUser = (params) => {
         if (!params) return handleLogout();
+        console.log('params', params)
 
         // const user_signed = Cookies.get('user_signed');
         // console.log("🚀 ~ file: index.js ~ line 13 ~ handleLogin ~ user_signed", user_signed)

@@ -6,6 +6,7 @@ import { GOOGLE_CLIENT_ID } from "../config";
 
 const App = (props) => {
   const handleLogin = (params) => {
+    console.log("🚀 ~ file: index.js ~ line 9 ~ handleLogin ~ params", params)
     if (!params?.tokenId) return;
 
     const email = params.profileObj.email;
@@ -14,6 +15,8 @@ const App = (props) => {
     Cookies.set('user_signed', JSON.stringify({ email, tokenId }))
     Router.push('/home');
   }
+
+  console.log('GOOGLE_CLIENT_ID', GOOGLE_CLIENT_ID)
 
   return (
     <div>
